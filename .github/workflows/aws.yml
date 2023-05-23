@@ -39,8 +39,8 @@ env:
                                                # file, e.g. .aws/task-definition.json
   CONTAINER_NAME: my-react-app-container           # set this to the name of the container in the
                                                # containerDefinitions section of your task definition
-
 permissions:
+  id-token: write
   contents: read
 
 jobs:
@@ -52,7 +52,6 @@ jobs:
     steps:
     - name: Checkout
       uses: actions/checkout@v3
-
     #- name: Configure AWS credentials
     #  uses: aws-actions/configure-aws-credentials@v1
     #  with:
