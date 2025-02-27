@@ -10,7 +10,7 @@ function App() {
           Edit <code>src/App.js</code> and save to reload.
         </p>
         <p>
-        Hola Grupo de AWS Puebla, esta es una prueba!
+        Hola Grupo de AWS Puebla, esta es una prueba 2!
         </p>
         <a
           className="App-link"
