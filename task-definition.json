@@ -1,13 +1,13 @@
 {
-    "taskDefinitionArn": "arn:aws:ecs:us-east-1:233716859431:task-definition/aws-gp-task:2",
+    "taskDefinitionArn": "arn:aws:ecs:us-east-2:779846808786:task-definition/aws-gp-task-01:1",
     "containerDefinitions": [
         {
             "name": "aws-gp-app-container",
-            "image": "233716859431.dkr.ecr.us-east-1.amazonaws.com/aws-gp-react-app:latest",
+            "image": "779846808786.dkr.ecr.us-east-2.amazonaws.com/gp/my-react-app:latest",
             "cpu": 0,
             "portMappings": [
                 {
-                    "name": "aws-gp-app-container-80-tcp",
+                    "name": "my-app-80-tcp",
                     "containerPort": 80,
                     "hostPort": 80,
                     "protocol": "tcp",
@@ -23,11 +23,11 @@
             "logConfiguration": {
                 "logDriver": "awslogs",
                 "options": {
-                    "awslogs-group": "/ecs/aws-gp-task",
+                    "awslogs-group": "/ecs/aws-gp-task-01",
                     "mode": "non-blocking",
                     "awslogs-create-group": "true",
                     "max-buffer-size": "25m",
-                    "awslogs-region": "us-east-1",
+                    "awslogs-region": "us-east-2",
                     "awslogs-stream-prefix": "ecs"
                 },
                 "secretOptions": []
@@ -35,11 +35,10 @@
             "systemControls": []
         }
     ],
-    "family": "aws-gp-task",
-    "taskRoleArn": "arn:aws:iam::233716859431:role/ecsTaskExecutionRole",
-    "executionRoleArn": "arn:aws:iam::233716859431:role/ecsTaskExecutionRole",
+    "family": "aws-gp-task-01",
+    "executionRoleArn": "arn:aws:iam::779846808786:role/ecsTaskExecutionRole",
     "networkMode": "awsvpc",
-    "revision": 2,
+    "revision": 1,
     "volumes": [],
     "status": "ACTIVE",
     "requiresAttributes": [
@@ -57,9 +56,6 @@
         },
         {
             "name": "com.amazonaws.ecs.capability.docker-remote-api.1.28"
-        },
-        {
-            "name": "com.amazonaws.ecs.capability.task-iam-role"
         },
         {
             "name": "ecs.capability.execution-role-ecr-pull"
@@ -83,13 +79,13 @@
         "FARGATE"
     ],
     "cpu": "1024",
-    "memory": "3072",
+    "memory": "2048",
     "runtimePlatform": {
         "cpuArchitecture": "X86_64",
         "operatingSystemFamily": "LINUX"
     },
-    "registeredAt": "2025-02-25T23:54:51.466Z",
-    "registeredBy": "arn:aws:iam::233716859431:root",
+    "registeredAt": "2025-02-26T03:26:05.628Z",
+    "registeredBy": "arn:aws:iam::779846808786:root",
     "enableFaultInjection": false,
     "tags": []
 }
