@@ -10,7 +10,10 @@ function App() {
           Edit <code>src/App.js</code> and save to reload.
         </p>
         <p>
-        Deployment exitoso, cómo estan?
+           Hemos hecho un cambio dentro de la aplicación.
+        </p>
+        <p>
+          Veamos si funcionó :)
         </p>
         <a
           className="App-link"
