@@ -37,7 +37,7 @@ env:
   ECS_CLUSTER: aws-gp-app-cluster-01               # set this to your Amazon ECS cluster name
   ECS_TASK_DEFINITION: ./aws-gp-task-revision2.json # set this to the path to your Amazon ECS task definition
                                                # file, e.g. .aws/task-definition.json
-  CONTAINER_NAME: my-react-app-container           # set this to the name of the container in the
+  CONTAINER_NAME: aws-gp-app-container         # set this to the name of the container in the
                                                # containerDefinitions section of your task definition
 permissions:
   id-token: write
