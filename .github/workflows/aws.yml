@@ -34,7 +34,7 @@ env:
   AWS_REGION: us-east-2                  # set this to your preferred AWS region, e.g. us-west-1
   ECR_REPOSITORY: gp/my-react-app          # set this to your Amazon ECR repository name
   ECS_SERVICE: aws-gp-app-service-01                 # set this to your Amazon ECS service name
-  ECS_CLUSTER: aws-gp-app-cluster-01               # set this to your Amazon ECS cluster name
+  ECS_CLUSTER: aws-gp-app-cluster-02               # set this to your Amazon ECS cluster name
   ECS_TASK_DEFINITION: .aws/task-definition.json # set this to the path to your Amazon ECS task definition
                                                # file, e.g. .aws/task-definition.json
   CONTAINER_NAME: aws-gp-app-container         # set this to the name of the container in the
@@ -58,7 +58,7 @@ jobs:
     - name: Configure AWS Credentials
       uses: aws-actions/configure-aws-credentials@v2
       with:
-        role-to-assume: arn:aws:iam::779846808786:role/github-action-role
+        role-to-assume: arn:aws:iam::442042543717:role/github-action-role
         aws-region: us-east-2
         #aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
         #aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}

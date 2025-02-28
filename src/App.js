@@ -13,7 +13,7 @@ function App() {
            Hemos hecho un cambio dentro de la aplicación.
         </p>
         <p>
-          Veamos si funcionó :), al parecer lo hizó!
+          Veamos si funcionó :), al parecer lo hizó ó quizás no?
         </p>
         <a
           className="App-link"
